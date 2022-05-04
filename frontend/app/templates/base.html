@@ -29,10 +29,13 @@
             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">About</a>
+            <a class="nav-link" href="{% url 'add' %}">Insertar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Registrarse</a>
+            <a class="nav-link" href="{% url 'delete' %}">Eliminar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'carga' %}">Cargar Archivo</a>
           </li>
           <!--{% if user %}
           <li class="nav-item">

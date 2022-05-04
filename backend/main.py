@@ -11,7 +11,7 @@ manager = Manager()
 def prueba():
     return "hola a todos soy una api, segunda frase"
 
-@app.route('/add',methods=['POST'])
+@app.route('/addVarios',methods=['POST'])
 def add_character():
     print(request.data)
     xml = request.data.decode('utf-8')
@@ -21,7 +21,7 @@ def add_character():
         #print(element.attrib['name'],element.attrib['anime'])
         #ingresando nuevo elemento
         manager.add_character(element.attrib['name'],element.attrib['anime'],element.attrib['image'],element.text)
-    return jsonify({'msg':'todo bien'}),200
+    return jsonify({'ok':True,'msg':'todo bien'}),200
 
 @app.route('/showall',methods=['GET'])
 def get_character():
